@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>{{formType === 'login' ? 'Login' : 'Sign Up'}}</h2>
+      <form ng-submit="submitForm()">
+        <input
+          type="text"
+          ng-model="user.username"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="password"
+          ng-model="user.password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">{{buttonText}}</button>
+      </form>
+      <p ng-if="formType === 'login'">
+        Don't have an account? <a href="#/signup">SignUp</a>
+      </p>
+      <p ng-if="formType === 'signup'">
+        Already have an account? <a href="#/login">Login</a>
+      </p>
+    </div>
+  </body>
+</html>

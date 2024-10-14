@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Products</h2>
+  <!-- <ul>
+    <li ng-repeat="product in products">
+      <p>{{ product.name }}</p>
+      <p>{{ product.email }}</p>
+      <p>{{ product.phone }}</p>
+      <button ng-click="deleteProduct(product.id)">Delete</button>
+    </li>
+  </ul> -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th style="padding: 1rem 0">Name</th>
+        <th style="padding: 1rem 0">Email</th>
+        <th style="padding: 1rem 0">Phone</th>
+        <th style="padding: 1rem 0">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="product in products">
+        <td style="padding: 0 1rem">{{ product.name }}</td>
+        <td style="padding: 0 1rem">{{ product.email}}</td>
+        <td style="padding: 0 1rem">{{ product.phone}}</td>
+        <td style="padding: 0 1rem">
+          <button ng-click="deleteProduct(product._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <h3>Add Product</h3>
+  <form ng-submit="addProduct(newProduct)">
+    <input
+      type="text"
+      ng-model="newProduct.name"
+      placeholder="Product Name"
+      required
+    />
+    <input
+      type="number"
+      ng-model="newProduct.price"
+      placeholder="Product Price"
+      required
+    />
+    <button type="submit">Add Product</button>
+  </form> -->
+</div>
